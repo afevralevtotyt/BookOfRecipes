@@ -1,20 +1,22 @@
 package me.fevralev.bookofrecipes.services.impl;
 
 import me.fevralev.bookofrecipes.model.Recipe;
-import me.fevralev.bookofrecipes.services.RecipesService;
+import me.fevralev.bookofrecipes.services.RecipeService;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Service
-public class RecipesServiceImpl implements RecipesService {
+public class RecipeServiceImpl implements RecipeService {
     private int id=0;
-    public Map<Integer, Recipe> recipeBook;
+    private Map<Integer, Recipe> recipeBook = new HashMap<>();
 
 
     @Override
-    public void add(Recipe recipe) {
+    public Recipe add(Recipe recipe) {
       recipeBook.put(id++, recipe);
+        return recipe;
     }
 
 

@@ -2,9 +2,9 @@ package me.fevralev.bookofrecipes.services;
 
 import me.fevralev.bookofrecipes.model.Recipe;
 
-public interface RecipesService {
+public interface RecipeService {
 
 
-    void add(Recipe recipe);
+    Recipe add(Recipe recipe);
     Recipe getById(int id);
 }
